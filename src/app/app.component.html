@@ -1,0 +1,17 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="col-md-auto col-sm-auto">Exploring the Universe</h1>
+  </div>
+</div>
+<div id="left" class="col-lg-5 col-md-5 col-sm-6 col-xs-12 ">
+  <img [src]="imageUrl" class="col-xs-12">
+  <app-zoom [(zoom)]="counter"></app-zoom>
+  <!--{{counter}}-->
+</div>
+<div id="right">
+  <ul>
+    <li *ngFor="let item of mail.messages" (click)="rename(item.name,mail.messages)">
+      {{item.name}}
+    </li>
+  </ul>
+</div>
